@@ -7,8 +7,16 @@ const Movies = () => {
   return (
     <div>
      <h1>Movies Page</h1>
-  {movies.map((movie, index)=>  <div key={index}> movie <p>{movie.title}</p> <p>{movie.time}</p> <ul>{movie.genres}</ul></div>) } 
-  {/* {movies.map((genre, index) => <ul>{genre.genres}</ul>)} */}
+  {/* {movies.map((movie, index)=>  <div key={index}> movie <p>{movie.title}</p> <p>{movie.time}</p> <ul>{movie.genres}</ul></div>) }  */}
+  {movies.map((movie, index) => (
+    <div key={index}> 
+    <h4>{movie.title}</h4>
+  <p>{movie.time}</p>
+    <ul>
+      {movie.genres}
+    </ul>
+    </div>
+  ))}
     </div>
   );
 };
